@@ -53,7 +53,9 @@ link_source<-paste0("https://github.com/jrealgatius/Stat_codis/blob/master/funci
 devtools::source_url(link_source)
 
 
-fitxer_cataleg<-"cataleg_general-desc_ARamirez.xlsx"
+#fitxer_cataleg<-"cataleg_general-desc_ARamirez.xlsx"
+
+conductor<-here::here("conductor.xlsx")
 
 #
 ```
@@ -68,9 +70,100 @@ arxiu<-"COPERNICAN_DATA_2022-02-16_1255.csv"
 
 dades<-fread(here::here("dades",arxiu))
 
-# write.csv2(names(dades),"vars.csv")
+#taula Basal:
 
-dades %>% select(record_id,fecha_de_firma_de_consenti,idpp4,nombre_farmaco_biguan2_37d)
+
+
+dades<- dades%>%select(
+record_id,
+redcap_event_name,
+redcap_data_access_group,
+fecha_de_firma_de_consenti,
+presta_libremente_su_confo,
+acepta_todas_las_opciones,
+opci_n_2_acepta_que_sus_da,
+opci_n_3_acepto_que_el_seg,
+opci_n_4_acepto_que_me_con,
+opci_n_5_acepto_transferen,
+opci_n_6_acepto_portabilid,
+cip,
+si_ha_marcado_la_opci_n_1,
+la_opci_n_1_4_telf,
+firma_consentimiento_informado_complete,
+fecha_inclu,
+criterio_inclu_1,
+criterio_inclu_2,
+criterio_inclu_3,
+criterio_exclu_1,
+se_ha_diagnosticado_otro_t,
+criterios_de_elegibilidad_complete,
+fecha_de_nacimiento,
+sexo,
+etnia,
+especificar_etnia,
+pa_s_de_origen,
+nivel_educativo,
+n_mero_de_hijos_hijos_que,
+tuvo_diabetes_gestacional,
+tiene_usted_la_menopausia,
+a_o_de_ltima_regla,
+datos_sociodemogrficos_complete,
+consumo_de_alcohol,
+grado_de_consumo_de_alchol,
+grado_de_consumo_de_tabaco,
+n_cigarillos_dia,
+consumo_de_drogas,
+hbitos_txicos_complete,
+peso_kg,
+talla_cm,
+imc_kg_m2,
+per_metro_cintura_cm,
+presi_n_arterial_sist_lica,
+presi_n_arterial_diast_lic,
+se_ha_hecho_la_cita_para_l,
+fecha_realizacion_pruebas,
+tibial_posterior_pie_derec,
+tibial_posterior_pie_izqui,
+pediopie_derecho,
+pediopie_izquierdo,
+fecha_de_itb,
+itb_derecho,
+itb_izquierdo,
+m_todo_itb,
+monofilamento_pie_derecho,
+monofilamento_pie_izquierd,
+sensibilidad_vibratoria_pi,
+sensibilidad_vibratoria_pz,
+retinografia,
+resultado_retinografia,
+informe_retinografia,
+variables_de_exploracin_fsica_complete)%>%filter(redcap_event_name=="visita_de_inclusin_arm_1")
+
+
+
+
+#Etquetem  NOMS! de les  VAR  a partir del Conductor!
+dades<-etiquetar(dades,camp_descripcio="descripcio1",taulavariables=conductor)
+
+
+#Etquetem  VALORS! de les VAR  a partir del Conductor!
+dades<-etiquetar_valors(dt=dades,variables_factors=conductor,fulla="etiquetes",camp_etiqueta="etiqueta1")
+
+
+
+#select(record_id,fecha_de_firma_de_consenti,idpp4,nombre_farmaco_biguan2_37d)
+
+
+#Etquetem  VALORS! de les VAR  a partir del Conductor!
+#dt_plana<-etiquetar_valors(dt=dt_plana,variables_factors=conductor,fulla="etiquetes",camp_etiqueta="etiqueta1")
+
+
+#Etquetem  NOMS! de les  VAR  a partir del Conductor!
+#dt_plana<-etiquetar(dt_plana,camp_descripcio="descripcio1",taulavariables=conductor)
+
+```
+
+
 
 
 
