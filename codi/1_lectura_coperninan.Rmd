@@ -147,7 +147,7 @@ dades<-etiquetar(dades,camp_descripcio="descripcio1",taulavariables=conductor)
 
 
 #Etquetem  VALORS! de les VAR  a partir del Conductor!
-dades<-etiquetar_valors(dt=dades,variables_factors=conductor,fulla="etiquetes",camp_etiqueta="etiqueta1")
+#dades<-etiquetar_valors(dt=dades,variables_factors=conductor,fulla="etiquetes",camp_etiqueta="etiqueta1")
 
 
 
