@@ -161,28 +161,19 @@ dades<-etiquetar(dades,camp_descripcio="descripcio1",taulavariables=conductor)
 #Etquetem  NOMS! de les  VAR  a partir del Conductor!
 #dt_plana<-etiquetar(dt_plana,camp_descripcio="descripcio1",taulavariables=conductor)
 
-```
-
-
-
-
 
 ```
-
-
 
 ```{r}
+
 if (params$fitxers_test) {
   dir_dades<-"dades/mostra"
   dir_dades_prep<-"dades/mostra"                        
   
     } else {dir_dades<-"../../../../DADES/EPIPEU_CAT3/dades"
             dir_dades_prep<-"dades"}
-
-
-
-
 ```
+
 
 
 
