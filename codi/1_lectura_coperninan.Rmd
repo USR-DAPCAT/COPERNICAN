@@ -683,6 +683,11 @@ formu_basal2<-formula_table1("basal2",y="",taulavariables=conductor,dt=dades)
 formu_basal3<-formula_table1("basal3",y="",taulavariables=conductor,dt=dades)
 formu_basal4<-formula_table1("basal4",y="",taulavariables=conductor,dt=dades)
 formu_basal5<-formula_table1("basal5",y="",taulavariables=conductor,dt=dades)
+formu_basal6<-formula_table1("basal6",y="",taulavariables=conductor,dt=dades)
+formu_basal7<-formula_table1("basal7",y="",taulavariables=conductor,dt=dades)
+formu_basal8<-formula_table1("basal8",y="",taulavariables=conductor,dt=dades)
+formu_basal9<-formula_table1("basal9",y="",taulavariables=conductor,dt=dades)
+formu_basal10<-formula_table1("basal10",y="",taulavariables=conductor,dt=dades)
 
 #--------------------------------------------------------------------------------------------------------------#
 table1::table1(formu_basal1,
@@ -715,6 +720,42 @@ table1::table1(formu_basal5,
                render.categorical="FREQ (PCTnoNA%)",
                topclass="Rtable1-zebra")
 #--------------------------------------------------------------------------------------------------------------#
+
+
+
+#--------------------------------------------------------------------------------------------------------------#
+table1::table1(formu_basal6,
+               data = dades,caption="Analisi Descriptiu GENERAL.",
+               render.continuous=c(.="N",.="Mean (SD)", .="Median [Q1, Q3]"),
+               render.categorical="FREQ (PCTnoNA%)",
+               topclass="Rtable1-zebra")
+#--------------------------------------------------------------------------------------------------------------#
+table1::table1(formu_basal7,
+               data = dades,caption="Analisi Descriptiu GENERAL.",
+               render.continuous=c(.="N",.="Mean (SD)", .="Median [Q1, Q3]"),
+               render.categorical="FREQ (PCTnoNA%)",
+               topclass="Rtable1-zebra")
+#--------------------------------------------------------------------------------------------------------------#
+table1::table1(formu_basal8,
+               data = dades,caption="Analisi Descriptiu GENERAL.",
+               render.continuous=c(.="N",.="Mean (SD)", .="Median [Q1, Q3]"),
+               render.categorical="FREQ (PCTnoNA%)",
+               topclass="Rtable1-zebra")
+#--------------------------------------------------------------------------------------------------------------#
+table1::table1(formu_basal9,
+               data = dades,caption="Analisi Descriptiu GENERAL.",
+               render.continuous=c(.="N",.="Mean (SD)", .="Median [Q1, Q3]"),
+               render.categorical="FREQ (PCTnoNA%)",
+               topclass="Rtable1-zebra")
+#--------------------------------------------------------------------------------------------------------------#
+table1::table1(formu_basal10,
+               data = dades,caption="Analisi Descriptiu GENERAL.",
+               render.continuous=c(.="N",.="Mean (SD)", .="Median [Q1, Q3]"),
+               render.categorical="FREQ (PCTnoNA%)",
+               topclass="Rtable1-zebra")
+#--------------------------------------------------------------------------------------------------------------#
+
+
 
 ```
 
