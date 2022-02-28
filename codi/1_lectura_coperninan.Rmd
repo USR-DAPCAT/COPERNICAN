@@ -98,14 +98,20 @@ pvalue <- function(x, ...) {
 list.files(here::here("dades"))
 
 arxiu<-"COPERNICAN_DATA_2022-02-16_1255.csv"
-
+arxiu2<-"COPERNICAN_DATA_2022-02-25_1928.csv"
 
 dades<-fread(here::here("dades",arxiu))
 
-#taula Basal:
+#NO FUNCIONA!!!
+dades2<-fread(here::here("dades",arxiu2))
 
 
-#DT_TEMP<-dades%>%select(record_id,redcap_event_name,consumo_de_alcohol,consumo_de_alcohol_v2)
+
+#20-02.2021
+
+vect<-as.vector(variable.names(dades2))
+write.csv(vect, file="variables_ATC.csv")
+
 
 
 dades<- dades%>%select(record_id	,
