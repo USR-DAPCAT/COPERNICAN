@@ -110,7 +110,7 @@ dades2<-fread(here::here("dades",arxiu2))
 #20-02.2021
 
 vect<-as.vector(variable.names(dades2))
-write.csv(vect, file="variables_ATC.csv")
+write.csv(vect, file="variables.csv", row.names = FALSE)
 
 
 
